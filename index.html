@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./Assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./Assets/css/icomoon.css">
+    <link rel=" stylesheet" href="./Assets/css/style.css">
+</head>
+
+<body>
+    <section>
+        <div class="container">
+            <div class="w-75 mx-auto my-3">
+                <h2>Product Management System</h2>
+                <label for="pname">Product Name</label>
+                <input type="text" class="form-control mb-2" name="pname" id="pname">
+                <p class="text-danger fs-6 d-none " id="invalidname">Please start with
+                    capital
+                    letter</p>
+
+                <label for="pprice">Product Price</label>
+                <input type="text" class="form-control mb-2" name="pprice" id="pprice">
+                <p class="text-danger fs-6 d-none " id="invalidprice"> Price between 1000
+                    and 10000</p>
+
+
+                <label for="pcategory">Product Category</label>
+                <input type="text" class="form-control mb-2" name="pcategory" id="pcategory">
+                <p class="text-danger fs-6 d-none " id="invalidcategory"> Please enter
+                    mobile or watch or screen</p>
+
+                <label for="pdesc">Product Descripition</label>
+                <textarea name="desc" id="pdesc" class="form-control mb-2 "></textarea>
+                <p class="text-danger fs-6 d-none" id="invaliddesc"> Maximium Charachers
+                    is 250</p>
+
+                <button class="btn btn-primary mt-3" id="addproduct">Add Product</button>
+                <button class="btn btn-warning d-none mt-3" id="updateproduct" onclick="updateValues()">Update
+                    Product</button>
+
+            </div>
+            <div class="w-75 mx-auto my-3">
+                <label for="search" class="mb-3">Search ...</label>
+                <input type="text" class="form-control" id="search" oninput="searchByName(this.value)">
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container ">
+            <div class="w-75 mx-auto">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>index</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Category</th>
+                            <th>Descripition</th>
+                            <th>Update</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody id="products">
+                        <tr>
+                            <td colspan="7" class="text-center">No Data to Show</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+        </div>
+    </section>
+    <script src="./Assets/js/bootstrap.bundle.js"></script>
+    <script src="./Assets/js/main.js"></script>
+</body>
+
+</html>
